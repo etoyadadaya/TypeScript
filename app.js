@@ -1,2 +1,7 @@
 "use strict";
-const a = 1;
+function getFullName(firstName, secondName) {
+    return `${firstName} ${secondName}`;
+}
+const getFullNameArrow = (firstName, secondName) => {
+    return `${firstName} ${secondName}`;
+};
