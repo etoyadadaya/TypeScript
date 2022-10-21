@@ -1,10 +1,4 @@
 "use strict";
-const skills = ["Dev", "DevOps", "Testing"];
-for (const skill of skills) {
-    console.log(skill);
-}
-const output = skills
-    .filter(skill => skill !== "DevOps")
-    .map(skill => skill + "! ")
-    .reduce((a, b) => a + b);
-console.log(output);
+const skills = [1, "Dev"];
+const [id, skillName] = skills;
+console.log(id, skillName);
