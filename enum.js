@@ -33,6 +33,7 @@ const res = {
     message: "Payment Success!",
     statusCode: StatusCode.SUCCESS
 };
+// res2 with const
 const res2 = 1 /* RolesConst.ADMIN */;
 if (res.statusCode === StatusCode.SUCCESS) {
 }

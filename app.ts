@@ -7,5 +7,3 @@ const arr: readonly [number, string, ...boolean[]] = [1, "DevOps", true, true, f
 const someSkills: readonly string[] = ["Dev", "DevOps"]; // readonly string array
 
 const extraSkills: ReadonlyArray<string> = ["Dev", "DevOps"]; // readonly generic
-
-

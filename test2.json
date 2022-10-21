@@ -1,0 +1,20 @@
+/* Запрос */
+
+{
+    "topicID": 5,
+    "status": "published" // "draft", "deleted" - optional
+}
+
+/* Ответ */
+[
+    {
+        "question": "how is delivered?",
+        "answer": "quick!",
+        "tags": [
+            "popular",
+            "new"
+        ],
+        "likes": 3,
+        "status": "published"
+    }
+]
