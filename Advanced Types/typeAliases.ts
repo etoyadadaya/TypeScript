@@ -13,32 +13,32 @@ fetchWithAuthA("https://localhost:8080", methodPost as "post"); // type casting
 
 
 
-type User = {
+type UserType = {
     name: string,
     age: number,
     skills: string[]
 }
 
-type Role = {
+type RoleType = {
     name: string, // if intersect then name in role and name in user override
     id: number;
 }
 
-type UserWithRole = User & Role; // Intersection
+type UserWithRoleType = UserType & RoleType; // Intersection
 
 // better for not override
 type UserWithRole1 = {
-    user: User,
-    role: Role
+    user: UserType,
+    role: RoleType
 }
 
-let user1: User = {
+let user1: UserType = {
     name: "john",
     age: 20,
     skills: ["1", "2"]
 };
 
-let user2: UserWithRole = {
+let user2: UserWithRoleType = {
     name: "john",
     age: 20,
     skills: ["1", "2"],
