@@ -1,0 +1,26 @@
+// запрос в виде платежа
+
+{
+    "sum": 10000,
+    "from": 2,
+    "to": 4
+}
+
+// ответ
+
+{
+    "status": "success",
+    "data": {
+        "databaseId": 567,
+        "sum": 10000,
+        "from": 2,
+        "to": 4
+    }
+},
+{
+    "status": "failed",
+    "data": {
+        "errorMessage": "Not enough money",
+        "errorCode": 4
+    }
+}
