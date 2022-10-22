@@ -1,31 +1,31 @@
-interface IPayment {
+interface IPayment1 {
     "sum": string;
     "from": number;
     "to": number;
 }
 
-enum PaymentStatus {
+enum PaymentStatus1 {
     Success = "success",
     Failed = "failed"
 }
 
-interface IDataSuccess extends IPayment{
+interface IDataSuccess1 extends IPayment1{
     "databaseId": number;
 }
 
-interface IDataFailed {
+interface IDataFailed1 {
     "errorMessage": string;
     "errorCode": number;
 }
 
-interface IPaymentRequest extends IPayment {}
+interface IPaymentRequest1 extends IPayment1 {}
 
-interface IResponseSuccess {
-    status: PaymentStatus.Success;
-    "data": IDataSuccess;
+interface IResponseSuccess1 {
+    status: PaymentStatus1.Success;
+    "data": IDataSuccess1;
 }
 
-interface IResponseFailed {
-    status: PaymentStatus.Failed;
-    "data": IDataFailed;
+interface IResponseFailed1 {
+    status: PaymentStatus1.Failed;
+    "data": IDataFailed1;
 }
