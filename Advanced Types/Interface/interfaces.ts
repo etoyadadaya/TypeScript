@@ -29,7 +29,7 @@ let user: UserWithRoleInterface = {
     roleId: 1,
     createdAt: new Date(),
 
-    log(id) {
+    log() {
         return '';
     }
 };

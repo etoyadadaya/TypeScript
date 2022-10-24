@@ -11,6 +11,5 @@ class UserController extends Controller {
         console.log(req);
     }
 }
-// new Controller - error
 const CC = new UserController();
 CC.handleWithLogs('request');

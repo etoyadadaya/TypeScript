@@ -1,41 +1,36 @@
 "use strict";
-// Narrowing with Types Union
 function logId(id) {
-    if (typeof id === "string") { // narrow to string
+    if (typeof id === "string") {
         console.log(id.toLowerCase());
     }
-    else if (typeof id === "number") { // narrow to number
+    else if (typeof id === "number") {
         console.log(id);
     }
-    else { // narrow to boolean
+    else {
         console.log(id);
     }
 }
-// Union with Types
 function LogError(err) {
     if (Array.isArray(err)) {
-        console.log(err); // narrow to string[]
+        console.log(err);
     }
     else {
-        console.log(err); // narrow to string
+        console.log(err);
     }
 }
-// Narrowing with object Type
 function logObject(obj) {
     if ("a" in obj) {
-        console.log(obj.a); // narrow to a.property
+        console.log(obj.a);
     }
     else {
-        console.log(obj.b); // narrow to b.property
+        console.log(obj.b);
     }
 }
-// Crossing types
 function logMultipleIds(a, b) {
     if (a === b) {
-        // narrow to string, cause found crossing string type
     }
     else {
-        console.log(a); // still string or number
+        console.log(a);
     }
 }
 logId("hello");

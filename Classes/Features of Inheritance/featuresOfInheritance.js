@@ -10,11 +10,10 @@ class Features_Payment {
 }
 class Features_PersistedPayment extends Features_Payment {
     constructor() {
-        const id = Math.random(); // work, because we don`t use Payment property, just create and use new variable;
+        const id = Math.random();
         super(id);
     }
     save() {
-        // save in db
     }
     pay(date) {
         super.pay();
@@ -33,11 +32,10 @@ class Features_Admin extends Features_User {
     constructor() {
         super();
         this.name = "admin";
-        console.log(this.name); // work, only after super
+        console.log(this.name);
     }
 }
 new Features_Admin();
-// new Error("");
 class Features_HttpError extends Error {
     constructor(message, code) {
         super(message);

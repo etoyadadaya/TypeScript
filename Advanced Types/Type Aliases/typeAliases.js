@@ -4,7 +4,7 @@ function fetchWithAuthA(url, method) {
 }
 fetchWithAuthA("https://localhost:8080", "post");
 let methodPost = "post";
-fetchWithAuthA("https://localhost:8080", methodPost); // type casting
+fetchWithAuthA("https://localhost:8080", methodPost);
 let user1 = {
     name: "john",
     age: 20,

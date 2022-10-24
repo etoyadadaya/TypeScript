@@ -4,7 +4,6 @@ class UserBuilder {
         this.name = name;
         return this;
     }
-    // type guard
     isAdmin() {
         return this instanceof AdminBuilder;
     }
@@ -17,8 +16,8 @@ resU.setName("U");
 resA.setName("A");
 let this_user = new UserBuilder();
 if (this_user.isAdmin()) {
-    console.log(this_user); // UserBuilder
+    console.log(this_user);
 }
 else {
-    console.log(this_user); // AdminBuilder
+    console.log(this_user);
 }

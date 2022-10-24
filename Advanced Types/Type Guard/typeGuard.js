@@ -12,15 +12,12 @@ function logIdGuard(id) {
         console.log(id);
     }
 }
-// type guard
 function isStringGuard(x) {
     return typeof x === "string";
 }
-// type guard
 function isAdmin(user) {
     return "role" in user;
 }
-// type guard with casting and checking role
 function isAdminAlternative(user) {
     return user.role !== undefined;
 }

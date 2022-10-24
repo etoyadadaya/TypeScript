@@ -14,7 +14,6 @@ class PersistedPayment extends Extends_Payment {
         super(id);
     }
     save() {
-        // save in db
     }
     pay(date) {
         super.pay();

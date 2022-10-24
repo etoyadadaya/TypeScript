@@ -11,13 +11,10 @@ function rec() {
 function processAction(action) {
     switch (action) {
         case "refund":
-            //...
             break;
         case "checkout":
-            //...
             break;
         case "reject":
-            //...
             break;
         default:
             const _ = action;

@@ -1,18 +1,10 @@
 "use strict";
-// 1 - Success
-// 2 - In process
-// 3 - Declined
-// enum with nums
 var StatusCode;
 (function (StatusCode) {
     StatusCode[StatusCode["SUCCESS"] = 1] = "SUCCESS";
     StatusCode[StatusCode["IN_PROCESS"] = 2] = "IN_PROCESS";
     StatusCode[StatusCode["FAILED"] = 3] = "FAILED";
 })(StatusCode || (StatusCode = {}));
-// 's' - Success
-// 'p' - In process
-// 'd' - Declined
-// enum with chars
 var StatusCodeChar;
 (function (StatusCodeChar) {
     StatusCodeChar["SUCCESS"] = "s";
@@ -22,7 +14,6 @@ var StatusCodeChar;
 function compute() {
     return 3;
 }
-// enum with function
 var Roles;
 (function (Roles) {
     Roles[Roles["ADMIN"] = 1] = "ADMIN";
@@ -33,8 +24,7 @@ const res = {
     message: "Payment Success!",
     statusCode: StatusCode.SUCCESS
 };
-// res2 with const
-const res2 = 1 /* RolesConst.ADMIN */;
+const res2 = 1;
 if (res.statusCode === StatusCode.SUCCESS) {
 }
 function action(status) {

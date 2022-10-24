@@ -43,7 +43,7 @@ class Features_User {
 }
 
 class Features_Admin extends Features_User {
-    name: string = "admin";
+    override name: string = "admin";
 
     constructor() {
         super();

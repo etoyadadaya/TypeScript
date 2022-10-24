@@ -8,38 +8,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-let input;
-input = 3;
-input = ["a", "b"];
-function run(i) {
-    if (typeof i == "number") {
-        i++;
-    }
-    else if (typeof i == "string") {
-        i.toUpperCase();
-    }
-    i;
-}
-run(input);
-function getData() {
+const array = [1, 2, 3];
+function testpr() {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
-            yield fetch("https://localhost:8080");
-        }
-        catch (err) {
-            if (err instanceof Error)
-                console.log(err.message);
-        }
+        const pr = yield new Promise((resolve, reject) => {
+            resolve(1);
+        });
     });
 }
-function getDataForce() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            yield fetch("https://localhost:8080");
-        }
-        catch (err) {
-            const e = err;
-            console.log(e.message);
-        }
-    });
-}
+const check = {
+    drive: true,
+    kpp: false
+};
