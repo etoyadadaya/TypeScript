@@ -1,3 +1,4 @@
 # TypeScript
-
-> This book is my reference and holy-grail: https://typescript-handbook.ru
+> This book is my reference: https://typescript-handbook.ru
+> 
+> holy-grail: https://www.typescriptlang.org/docs/handbook/
