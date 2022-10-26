@@ -31,6 +31,7 @@ class DFUserService implements IUserService {
      and in / threeUsersAdvanced / it`s like constructive class
  */
 
+
 // modifying class prototype
 function nullUsersDF(target: Function) {
     target.prototype.users = 0;
