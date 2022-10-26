@@ -1,18 +1,24 @@
-interface IUserService {
+interface T2IUserService {
     users: number;
-    getUserInDatabase(): number;
+    throwError(): number;
 }
 
-class T2UserService implements IUserService {
+class T2UserService implements T2IUserService {
     users: number = 1000;
 
     @Catch({ rethrow: true })
-    getUserInDatabase(): number {
+    throwError(): number {
         throw new Error('error!');
     }
 }
 
 
+/*
+     if rethrow = false => print error message
+     if rethrow = true => throw error
+*/
+
+// Decorator for catching errors and process them
 function Catch({ rethrow }: { rethrow: boolean } = { rethrow: false }) {
     return (
         target: Object,
@@ -35,5 +41,5 @@ function Catch({ rethrow }: { rethrow: boolean } = { rethrow: false }) {
     }
 }
 
-// create new instance of class and use method to get number of users in db
-console.log(new T2UserService().getUserInDatabase());
+// create new instance of class and use method to throw error
+console.log(new T2UserService().throwError());

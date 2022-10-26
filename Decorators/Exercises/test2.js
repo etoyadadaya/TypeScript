@@ -9,13 +9,13 @@ class T2UserService {
     constructor() {
         this.users = 1000;
     }
-    getUserInDatabase() {
+    throwError() {
         throw new Error('error!');
     }
 }
 __decorate([
     Catch({ rethrow: true })
-], T2UserService.prototype, "getUserInDatabase", null);
+], T2UserService.prototype, "throwError", null);
 function Catch({ rethrow } = { rethrow: false }) {
     return (target, propertyKey, descriptor) => {
         const method = descriptor.value;
@@ -34,4 +34,4 @@ function Catch({ rethrow } = { rethrow: false }) {
         };
     };
 }
-console.log(new T2UserService().getUserInDatabase());
+console.log(new T2UserService().throwError());
