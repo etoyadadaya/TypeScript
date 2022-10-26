@@ -8,23 +8,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-class PADUserService {
-    getUsersInDatabasePD() {
-        return this._users;
-    }
-    setUsersInDatabasePD(num, _) {
-        this._users = num;
-    }
-}
-__decorate([
-    __param(0, Positive()),
-    __param(1, Positive())
-], PADUserService.prototype, "setUsersInDatabasePD", null);
-function Positive() {
-    return (target, propertyKey, parameterIndex) => {
-        console.log(target);
-        console.log(propertyKey);
-        console.log(parameterIndex);
+function Uni(name) {
+    console.log(`initialization ${name}`);
+    return function () {
+        console.log(`call ${name}`);
     };
 }
-const userServicePAD = new PADUserService();
+let MyClass = class MyClass {
+    constructor(_) { }
+    methods(_) { }
+    static method(_) { }
+};
+__decorate([
+    Uni('property')
+], MyClass.prototype, "props", void 0);
+__decorate([
+    Uni('method'),
+    __param(0, Uni('method parameter'))
+], MyClass.prototype, "methods", null);
+__decorate([
+    Uni('static property')
+], MyClass, "prop", void 0);
+__decorate([
+    Uni('static method'),
+    __param(0, Uni('static method parameter'))
+], MyClass, "method", null);
+MyClass = __decorate([
+    Uni('class'),
+    __param(0, Uni('constructor parameter'))
+], MyClass);
