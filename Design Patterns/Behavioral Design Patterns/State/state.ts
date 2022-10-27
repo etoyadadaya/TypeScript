@@ -117,4 +117,4 @@ console.log(item.getState());
          name: 'DraftDocument',
          item: DocumentItem { state: [Circular *1], text: 'My post!' }
     }
- */
+*/
