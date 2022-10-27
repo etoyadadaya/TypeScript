@@ -1,4 +1,4 @@
-abstract class Controller {
+abstract class AController {
     abstract handle(req: any): void;
 
     handleWithLogs(req: any) {
@@ -8,7 +8,7 @@ abstract class Controller {
     }
 }
 
-class UserController extends Controller {
+class UserController extends AController {
     handle(req: any) {
         console.log(req);
     }
