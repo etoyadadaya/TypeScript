@@ -1,16 +1,16 @@
 "use strict";
-class UserService {
+class sUserService {
     constructor(id) { }
     static getUser(id) {
-        return UserService.db.findById(id);
+        return sUserService.db.findById(id);
     }
     create() {
-        UserService.db;
+        sUserService.db;
     }
 }
 (() => {
-    UserService.db = "postgresql";
+    sUserService.db = "postgresql";
 })();
-UserService.getUser(1);
-const inst = new UserService(1);
+sUserService.getUser(1);
+const inst = new sUserService(1);
 inst.create();
