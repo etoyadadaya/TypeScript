@@ -13,5 +13,5 @@ class MyLogger extends Logger {
         this.log(message);
     }
 }
-const logger = new MyLogger();
-logger.logWithDate("My message");
+const logger1 = new MyLogger();
+logger1.logWithDate("My message");
