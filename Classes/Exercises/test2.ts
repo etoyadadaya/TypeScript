@@ -11,7 +11,7 @@
      Delivery: может быть как до дома (дата и адрес) или до пункта выдачи (дата = Сегодня и Id магазина)
 */
 
-class Product {
+class ProductT2 {
     constructor(
         public id: number,
         public title: string,
@@ -40,15 +40,15 @@ class ShopDelivery extends Delivery {
 type DeliveryOptions = HomeDelivery | ShopDelivery;
 
 class Cart {
-    private products: Product[] = [];
+    private products: ProductT2[] = [];
     private delivery: DeliveryOptions;
 
-    public addProduct(product: Product): void {
+    public addProduct(product: ProductT2): void {
         this.products.push(product);
     }
 
     public deleteProduct(productId: number): void {
-        this.products = this.products.filter((p: Product) => p.id !== productId);
+        this.products = this.products.filter((p: ProductT2) => p.id !== productId);
     }
 
     public getPrice(): number {
@@ -73,9 +73,9 @@ class Cart {
 }
 
 const cart = new Cart();
-cart.addProduct(new Product(1, "Cookie", 10));
-cart.addProduct(new Product(2, "Cake", 20));
-cart.addProduct(new Product(3, "Chocolate", 5));
+cart.addProduct(new ProductT2(1, "Cookie", 10));
+cart.addProduct(new ProductT2(2, "Cake", 20));
+cart.addProduct(new ProductT2(3, "Chocolate", 5));
 cart.deleteProduct(3);
 cart.setDelivery(new HomeDelivery(new Date(), "Respect Street - rolled in"));
 

@@ -1,5 +1,5 @@
 "use strict";
-class Product {
+class ProductT2 {
     constructor(id, title, price) {
         this.id = id;
         this.title = title;
@@ -52,9 +52,9 @@ class Cart {
     }
 }
 const cart = new Cart();
-cart.addProduct(new Product(1, "Cookie", 10));
-cart.addProduct(new Product(2, "Cake", 20));
-cart.addProduct(new Product(3, "Chocolate", 5));
+cart.addProduct(new ProductT2(1, "Cookie", 10));
+cart.addProduct(new ProductT2(2, "Cake", 20));
+cart.addProduct(new ProductT2(3, "Chocolate", 5));
 cart.deleteProduct(3);
 cart.setDelivery(new HomeDelivery(new Date(), "Respect Street - rolled in"));
 console.log(cart.getPrice());

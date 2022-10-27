@@ -23,4 +23,4 @@ class PaymentAccessProxy {
 const proxy = new PaymentAccessProxy(new PaymentAPI(), 1);
 console.log(proxy.getPaymentDetails(1));
 const proxy2 = new PaymentAccessProxy(new PaymentAPI(), 2);
-console.log(proxy.getPaymentDetails(2));
+console.log(proxy2.getPaymentDetails(1));
