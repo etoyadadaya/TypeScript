@@ -79,8 +79,6 @@ class PriorityTaskIterator implements IIterator<Task> {
     index(): number {
         return this.position;
     }
-
-
 }
 
 // creating task list
