@@ -38,4 +38,4 @@ console.log(proxy.getPaymentDetails(1)); // [LOG]: { "id": 1, "sum": 10000 }
 
 // user without access
 const proxy2 = new PaymentAccessProxy(new PaymentAPI(), 2);
-console.log(proxy.getPaymentDetails(2)); // [LOG]: undefined
+console.log(proxy2.getPaymentDetails(1)); // [LOG]: "trying to get payment details!" / [LOG]: undefined
