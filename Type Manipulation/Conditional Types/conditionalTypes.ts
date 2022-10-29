@@ -21,27 +21,27 @@ class CTUser {
     name: string;
 }
 
-class CTUserPersistend extends CTUser{
+class CTUUserPersistent extends CTUser{
     dbId: string;
 }
 
 function CTGetUser(id: number): CTUser;
-function CTGetUser(dbId: string): CTUserPersistend;
-function CTGetUser(dbIdOrId: string | number): CTUser | CTUserPersistend {
+function CTGetUser(dbId: string): CTUUserPersistent;
+function CTGetUser(dbIdOrId: string | number): CTUser | CTUUserPersistent {
     if (typeof dbIdOrId === "number") {
         return new CTUser();
     } else {
-        return new CTUserPersistend();
+        return new CTUUserPersistent();
     }
 }
 
-type UserOrUserPersistend<T extends string | number> = T extends number ? CTUser : CTUserPersistend;
+type UserOrUserPersistent<T extends string | number> = T extends number ? CTUser : CTUUserPersistent;
 
-function CTGetUser2<T extends string | number>(id: T): UserOrUserPersistend<T> {
+function CTGetUser2<T extends string | number>(id: T): UserOrUserPersistent<T> {
     if (typeof id === "number") {
-        return new CTUser() as UserOrUserPersistend<T>;
+        return new CTUser() as UserOrUserPersistent<T>;
     } else {
-        return new CTUserPersistend();
+        return new CTUUserPersistent();
     }
 }
 
